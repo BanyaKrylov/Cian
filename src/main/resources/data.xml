@@ -1,0 +1,31 @@
+<list>
+    <ru.auto.cian.SearchData>
+        <dealType>Снять</dealType>
+        <propertyType>Комната</propertyType>
+        <priceFrom>20000</priceFrom>
+        <priceUpTo>50000</priceUpTo>
+        <location>Санкт-Петербург</location>
+    </ru.auto.cian.SearchData>
+    <ru.auto.cian.SearchData>
+        <dealType>Купить</dealType>
+        <propertyType>Дом</propertyType>
+        <priceFrom>5000000</priceFrom>
+        <priceUpTo>10000000</priceUpTo>
+        <location>Московская область</location>
+    </ru.auto.cian.SearchData>
+    <ru.auto.cian.SearchData>
+        <dealType>Посуточно</dealType>
+        <propertyType>Койко-место</propertyType>
+        <priceFrom>1500</priceFrom>
+        <priceUpTo>3500</priceUpTo>
+        <location>Москва</location>
+    </ru.auto.cian.SearchData>
+    <ru.auto.cian.SearchData>
+        <dealType>Купить</dealType>
+        <propertyType>Квартира</propertyType>
+        <rooms>3-комнатная</rooms>
+        <priceFrom>6000000</priceFrom>
+        <priceUpTo>8000000</priceUpTo>
+        <location>Алтайский край</location>
+    </ru.auto.cian.SearchData>
+</list>
