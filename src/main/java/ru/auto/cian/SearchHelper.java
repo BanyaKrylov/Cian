@@ -34,47 +34,9 @@ public class SearchHelper extends HelperBase {
       click(By.xpath("//div[@class='c-filters-form___2RBwa']//label[.='2-комнатная']"));
       click(By.xpath("//div[@class='c-filters-form___2RBwa']//label[.='1-комнатная']"));
       click(By.xpath("//div[@class='c-filters-form___2RBwa']//label[.='" + searchData.getRooms() + "']"));
-      type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
-      type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
-      click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
-      click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
-      click(By.cssSelector("button.c-filters-field-button___1EBB-"));
-      this.sleep(2);
-      click(By.linkText("Подробнее"));
-      ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
-      wd.switchTo().window((String) tabs.get(1));
-      Actions actions = new Actions(wd);
-      this.sleep(2);
-      WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
-      actions.moveToElement(element);
-      actions.perform();
-      this.sleep(2);
-      for (int i = 0; i < 5; i++) {
-        click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
-      }
-      wd.close();
-      wd.switchTo().window((String) tabs.get(0));
+      searchContinue(searchData);
     } else {
-      type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
-      type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
-      click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
-      click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
-      click(By.cssSelector("button.c-filters-field-button___1EBB-"));
-      this.sleep(2);
-      click(By.linkText("Подробнее"));
-      ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
-      wd.switchTo().window((String) tabs.get(1));
-      Actions actions = new Actions(wd);
-      this.sleep(2);
-      WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
-      actions.moveToElement(element);
-      actions.perform();
-      this.sleep(2);
-      for (int i = 0; i < 5; i++) {
-        click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
-      }
-      wd.close();
-      wd.switchTo().window((String) tabs.get(0));
+      searchContinue(searchData);
     }
   }
 
@@ -84,5 +46,28 @@ public class SearchHelper extends HelperBase {
     } catch (InterruptedException e) {
 
     }
+  }
+
+  public void searchContinue(SearchData searchData) {
+    type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
+    type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
+    click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
+    click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
+    click(By.cssSelector("button.c-filters-field-button___1EBB-"));
+    this.sleep(2);
+    click(By.linkText("Подробнее"));
+    ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
+    wd.switchTo().window((String) tabs.get(1));
+    Actions actions = new Actions(wd);
+    this.sleep(2);
+    WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
+    actions.moveToElement(element);
+    actions.perform();
+    this.sleep(2);
+    for (int i = 0; i < 5; i++) {
+      click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
+    }
+    wd.close();
+    wd.switchTo().window((String) tabs.get(0));
   }
 }
