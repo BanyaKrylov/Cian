@@ -2,6 +2,11 @@ package ru.auto.cian;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -34,11 +39,45 @@ public class SearchHelper extends HelperBase {
       type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
       click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
       click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
+      click(By.cssSelector("button.c-filters-field-button___1EBB-"));
+      click(By.linkText("Подробнее"));
+      ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
+      wd.switchTo().window((String) tabs.get(1));
+      Actions actions = new Actions(wd);
+      WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
+      actions.moveToElement(element);
+      actions.perform();
+      this.sleep(2);
+      for (int i = 0; i < 5; i++) {
+        click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
+      }
+      wd.close();
     } else {
       type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
       type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
       click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
       click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
+      click(By.cssSelector("button.c-filters-field-button___1EBB-"));
+      click(By.linkText("Подробнее"));
+      ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
+      wd.switchTo().window((String) tabs.get(1));
+      Actions actions = new Actions(wd);
+      WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
+      actions.moveToElement(element);
+      actions.perform();
+      this.sleep(2);
+      for (int i = 0; i < 5; i++) {
+        click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
+      }
+      wd.close();
+    }
+  }
+  public void sleep(int seconds)
+  {
+    try {
+      Thread.sleep(seconds * 1000);
+    } catch (InterruptedException e) {
+
     }
   }
 }
