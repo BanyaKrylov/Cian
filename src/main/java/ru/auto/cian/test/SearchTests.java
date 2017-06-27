@@ -32,8 +32,8 @@ public class SearchTests extends TestBase {
 
   @Test(dataProvider = "validQueryFromXml")
   public void Search(SearchData searchData) {
-      MANAGER.search().homePage();
-      MANAGER.search().fillSearchForm(searchData);
+    MANAGER.search().homePage();
+    MANAGER.search().fillSearchForm(searchData);
   }
 
   @Test
