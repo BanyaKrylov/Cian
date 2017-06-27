@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 /**
@@ -18,7 +17,7 @@ public class SearchHelper extends HelperBase {
   }
 
   public void homePage() {
-    click(By.cssSelector("span.c-header-logo"));
+    wd.get("https://www.cian.ru/");
   }
 
   public void fillSearchForm(SearchData searchData) {
@@ -40,10 +39,12 @@ public class SearchHelper extends HelperBase {
       click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
       click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
       click(By.cssSelector("button.c-filters-field-button___1EBB-"));
+      this.sleep(2);
       click(By.linkText("Подробнее"));
       ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
       wd.switchTo().window((String) tabs.get(1));
       Actions actions = new Actions(wd);
+      this.sleep(2);
       WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
       actions.moveToElement(element);
       actions.perform();
@@ -52,16 +53,19 @@ public class SearchHelper extends HelperBase {
         click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
       }
       wd.close();
+      wd.switchTo().window((String) tabs.get(0));
     } else {
       type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
       type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
       click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
       click(By.xpath("//div[@class='c_filters-suggest_container___1vQFv']//div[.='" + searchData.getLocation() + "']"));
       click(By.cssSelector("button.c-filters-field-button___1EBB-"));
+      this.sleep(2);
       click(By.linkText("Подробнее"));
       ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
       wd.switchTo().window((String) tabs.get(1));
       Actions actions = new Actions(wd);
+      this.sleep(2);
       WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
       actions.moveToElement(element);
       actions.perform();
@@ -70,10 +74,11 @@ public class SearchHelper extends HelperBase {
         click(By.cssSelector("div.fotorama__arr.fotorama__arr--next"));
       }
       wd.close();
+      wd.switchTo().window((String) tabs.get(0));
     }
   }
-  public void sleep(int seconds)
-  {
+
+  public void sleep(int seconds) {
     try {
       Thread.sleep(seconds * 1000);
     } catch (InterruptedException e) {

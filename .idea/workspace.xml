@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cc496217-71fb-4b73-958f-152dc4a609df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/resources/main/data.xml" afterPath="$PROJECT_DIR$/build/resources/main/data.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/cian/SearchHelper.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/cian/SearchHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/auto/cian/test/SearchTests.java" afterPath="$PROJECT_DIR$/src/main/java/ru/auto/cian/test/SearchTests.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/data.xml" afterPath="$PROJECT_DIR$/src/main/resources/data.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="SearchTests.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/test/SearchTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+            <state relative-caret-position="38">
+              <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -47,8 +46,8 @@
       <file leaf-file-name="data.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
+            <state relative-caret-position="102">
+              <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -57,10 +56,12 @@
       <file leaf-file-name="SearchHelper.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/SearchHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+            <state relative-caret-position="2">
+              <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#383#384#0" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -969,34 +970,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 14m 22s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 42m 56s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 15m 05s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 45m 44s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 17m 10s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 47m 34s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 34m 51s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 49m 04s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 35m 18s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 50m 22s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 36m 58s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 52m 10s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 12h 37m 36s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 54m 10s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 13m 54s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 55m 14s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 21m 18s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 57m 39s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="SearchTests_Search - 2017.06.27 at 16h 21m 56s.xml">
+    <history-entry file="SearchTests_Search - 2017.06.27 at 17h 01m 49s.xml">
       <configuration name="SearchTests.Search" configurationId="TestNG" />
     </history-entry>
   </component>
@@ -1317,14 +1318,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="24" lean-forward="false" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/HelperBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="123">
@@ -1336,28 +1329,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/test/SearchTests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="39" column="0" lean-forward="false" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+        <state relative-caret-position="38">
+          <caret line="33" column="45" lean-forward="false" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="28" column="58" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="58" />
+        <state relative-caret-position="136">
+          <caret line="26" column="59" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="59" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/auto/cian/SearchHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="71" column="17" lean-forward="false" selection-start-line="71" selection-start-column="17" selection-end-line="71" selection-end-column="17" />
+        <state relative-caret-position="2">
+          <caret line="54" column="17" lean-forward="false" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#383#384#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
           </folding>
         </state>
       </provider>

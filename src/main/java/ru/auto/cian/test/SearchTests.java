@@ -1,21 +1,17 @@
 package ru.auto.cian.test;
 
 import com.thoughtworks.xstream.XStream;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import ru.auto.cian.SearchData;
-import ru.auto.cian.SearchHelper;
 import ru.auto.cian.TestBase;
 
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Objects;
 import java.util.stream.Collectors;
 
 public class SearchTests extends TestBase {
@@ -36,8 +32,8 @@ public class SearchTests extends TestBase {
 
   @Test(dataProvider = "validQueryFromXml")
   public void Search(SearchData searchData) {
-    MANAGER.search().homePage();
-    MANAGER.search().fillSearchForm(searchData);
+      MANAGER.search().homePage();
+      MANAGER.search().fillSearchForm(searchData);
   }
 
   @Test
@@ -46,6 +42,6 @@ public class SearchTests extends TestBase {
     System.out.println(currentDir.getAbsolutePath());
     File data = new File("src/main/resources/data.xml");
     System.out.println(data.getAbsolutePath());
-    System.out.println("File exists: " + data.exists() );
+    System.out.println("File exists: " + data.exists());
   }
 }
