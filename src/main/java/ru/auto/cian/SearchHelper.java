@@ -1,11 +1,20 @@
 package ru.auto.cian;
 
+import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.junit.Before;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -16,11 +25,15 @@ public class SearchHelper extends HelperBase {
     super(wd);
   }
 
+  List<String> url = new ArrayList<>();
+  Workbook workbook = new HSSFWorkbook();
+  Sheet sheet = workbook.createSheet("URL");
+
   public void homePage() {
     wd.get("https://www.cian.ru/");
   }
 
-  public void fillSearchForm(SearchData searchData) {
+  public void fillSearchForm(SearchData searchData) throws IOException {
     click(By.xpath("//div[@class='c-filters-form___2RBwa']//button[.='Купить']"));
     click(By.xpath("//div[@class='c-filters-form___2RBwa']//div[.='" + searchData.getDealType() + "']"));
     click(By.xpath("//div[@class='c-filters-form___2RBwa']//button[.='Квартиру']"));
@@ -48,7 +61,7 @@ public class SearchHelper extends HelperBase {
     }
   }
 
-  public void searchContinue(SearchData searchData) {
+  public void searchContinue(SearchData searchData) throws IOException {
     type((By.cssSelector("input[placeholder ='от']")), String.valueOf(searchData.getPriceFrom()));
     type((By.cssSelector("input[placeholder ='до']")), String.valueOf(searchData.getPriceUpTo()));
     click(By.cssSelector("span.c_filters-suggest_input-drop_icon___3gvN5"));
@@ -58,6 +71,8 @@ public class SearchHelper extends HelperBase {
     click(By.linkText("Подробнее"));
     ArrayList tabs = new ArrayList<>(wd.getWindowHandles());
     wd.switchTo().window((String) tabs.get(1));
+    takeUrl();
+    writeInToExcel("src/main/resources/offers.xls");
     Actions actions = new Actions(wd);
     this.sleep(2);
     WebElement element = wd.findElement(By.cssSelector("img.fotorama__img"));
@@ -69,5 +84,20 @@ public class SearchHelper extends HelperBase {
     }
     wd.close();
     wd.switchTo().window((String) tabs.get(0));
+  }
+
+  public void takeUrl() {
+    url.add(wd.getCurrentUrl());
+  }
+
+  public void writeInToExcel(String file) throws IOException {
+    for (int i = 0; i < url.size(); i++) {
+      Row row = sheet.createRow(i);
+      Cell offer = row.createCell(0);
+      offer.setCellValue(url.get(i));
+      sheet.autoSizeColumn(i);
+    }
+    workbook.write(new FileOutputStream(file));
+    workbook.close();
   }
 }

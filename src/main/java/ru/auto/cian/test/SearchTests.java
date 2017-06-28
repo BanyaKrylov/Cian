@@ -31,7 +31,7 @@ public class SearchTests extends TestBase {
   }
 
   @Test(dataProvider = "validQueryFromXml")
-  public void Search(SearchData searchData) {
+  public void Search(SearchData searchData) throws IOException {
     MANAGER.search().homePage();
     MANAGER.search().fillSearchForm(searchData);
   }

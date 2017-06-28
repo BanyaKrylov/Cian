@@ -11,4 +11,5 @@ dependencies {
     compile 'com.beust:jcommander:1.72'
     compile 'com.thoughtworks.xstream:xstream:1.4.10'
     compile 'com.google.code.gson:gson:2.8.1'
+    compile 'org.apache.poi:poi-excelant:3.17-beta1'
 }
