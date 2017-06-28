@@ -1,10 +1,10 @@
-package ru.auto.cian.test;
+package ru.auto.cian.tests;
 
 import com.thoughtworks.xstream.XStream;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import ru.auto.cian.SearchData;
-import ru.auto.cian.TestBase;
+import ru.auto.cian.Helpers.SearchData;
+import ru.auto.cian.Helpers.TestBase;
 
 import java.io.BufferedReader;
 import java.io.File;

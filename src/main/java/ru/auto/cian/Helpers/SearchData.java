@@ -1,4 +1,4 @@
-package ru.auto.cian;
+package ru.auto.cian.Helpers;
 
 /**
  * Created by Иван on 26.06.2017.

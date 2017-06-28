@@ -1,4 +1,4 @@
-package ru.auto.cian;
+package ru.auto.cian.ApplicationManagers;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,6 +8,7 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.safari.SafariDriver;
+import ru.auto.cian.Helpers.SearchHelper;
 
 import java.util.concurrent.TimeUnit;
 

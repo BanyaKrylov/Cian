@@ -1,8 +1,9 @@
-package ru.auto.cian;
+package ru.auto.cian.Helpers;
 
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import ru.auto.cian.ApplicationManagers.CianManager;
 
 /**
  * Created by Иван on 26.06.2017.

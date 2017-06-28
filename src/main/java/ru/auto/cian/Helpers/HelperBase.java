@@ -1,4 +1,4 @@
-package ru.auto.cian;
+package ru.auto.cian.Helpers;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
